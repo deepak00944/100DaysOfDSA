@@ -4,7 +4,7 @@ public class JumpII {
         int[] arr = {1, 4, 3, 2, 6, 7};
         System.out.println(minJumps(arr));
     }
-
+ 
     static int minJumps(int[] arr){
         int n = arr.length;
         int maxReach =0,jump=0,currReach=0;
