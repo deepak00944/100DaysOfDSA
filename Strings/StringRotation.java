@@ -1,5 +1,4 @@
 // Check if Strings Are Rotations of Each Other
-// Knuth Morris Pratt (KMP) Algorithm
 
 public class StringRotation {
     public static void main(String[] args) {
