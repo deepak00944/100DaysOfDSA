@@ -1,30 +1,29 @@
 
-import java.util.Arrays;
 
 
 
 
 public class Practice {
     public static void main(String[] args) {
-        int[] a = {1,2,3,4,5};
-        int[] b ={1,2,3};
-        int res=0;
+        // int[] a = {1,2,3,4,5};
+        // int[] b ={1,2,3};
+        // int res=0;
 
-        int[] cnt = new int[(int)(1e5+5)];
-        for (int i : a) {
-            cnt[i]++;
-        }
+        // int[] cnt = new int[(int)(1e5+5)];
+        // for (int i : a) {
+        //     cnt[i]++;
+        // }
         
-        for (int i : b) {
-            cnt[i]++;
-        }
+        // for (int i : b) {
+        //     cnt[i]++;
+        // }
 
-        for (int i : cnt) {
-            if(i>0){ 
-                res++;
-            }
-        }
-        System.out.println(res);
+        // for (int i : cnt) {
+        //     if(i>0){ 
+        //         res++;
+        //     }
+        // }
+        // System.out.println(res);
         // Set<Integer> list = new HashSet<>(10);
         // for (int i = 0; i < a.length; i++) {
         //     list.add(a[i]);
@@ -34,8 +33,28 @@ public class Practice {
         // }
 
         // System.out.println(list.size());
+        int num =20;
+        boolean isPrime = true;
+        if(num<=1) isPrime = false;
+        for(int i = 2; i*i<=num;i++){
+            if(num%i == 0){
+                isPrime = false;
+                break;
+            }else{
+                isPrime = true;
+            }
+        }
+        if(isPrime){
+            System.out.println("Number is Prime");
+        }else{
+            System.out.println("Number is not a Prime");
+        }
     }
 
+    // Prime
+    public static void isPrime(){
+
+    }
 //     static void negative(int[] arr){
 //         // int [] temp = new int[arr.length];
 //         // int idx =0;

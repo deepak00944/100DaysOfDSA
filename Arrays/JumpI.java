@@ -7,8 +7,9 @@ public class JumpI {
     }
 
     static boolean minJumps(int[] arr){
-        if(arr[0] ==0) return false;
         int n =arr.length;
+        if(n==1) return true;
+        if(arr[0] ==0) return false;
         int maxIndex=0;
         for (int i = 0; i < n-1; i++) {
             if(i > maxIndex){
