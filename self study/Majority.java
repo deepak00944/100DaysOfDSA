@@ -1,5 +1,6 @@
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Majority {
     public static void main(String[] args) {
@@ -28,6 +29,18 @@ public class Majority {
         }
         Arrays.sort(freq);
         System.out.println(freq[freq.length-1]);
+
+        HashMap<Integer, Integer> countMap = new HashMap<>();
+        int majorityCount = nums.length/2;
+        for(int num:nums){
+            int count = countMap.getOrDefault(num, 0)+1;
+            countMap.put(num, count);
+            System.out.println(countMap.getOrDefault(num, 0)+1);
+            if(count>majorityCount){
+                System.out.println(num); 
+            }
+        }
+        System.out.println("");
 
     }
 }
