@@ -9,17 +9,26 @@ public class StockBuyAndSell{
             return 0;
         }
         
-        int minPrice = prices[0];
-        int maxProfit = 0;
+        // int minPrice = prices[0];
+        // int maxProfit = 0;
         
-        for (int i = 1; i < prices.length; i++) {
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            }
-            int currentProfit = prices[i] - minPrice;
-            if (currentProfit > maxProfit) {
-                maxProfit = currentProfit;
-            }
+        // for (int i = 1; i < prices.length; i++) {
+        //     if (prices[i] < minPrice) {
+        //         minPrice = prices[i];
+        //     }
+        //     int currentProfit = prices[i] - minPrice;
+        //     if (currentProfit > maxProfit) {
+        //         maxProfit = currentProfit;
+        //     }
+        // }
+
+        // More simmpler way of doing this is
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for(int price: prices){
+            minPrice = Math.min(minPrice, price);
+            maxProfit = Math.max(maxProfit, price - minPrice);
         }
         
         return maxProfit;
