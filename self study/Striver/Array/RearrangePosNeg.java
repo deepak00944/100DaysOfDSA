@@ -8,34 +8,37 @@ public class RearrangePosNeg {
 
     public static int[] reaarangeArray(int [] nums){
         int n = nums.length;
-        int [] pos = new int[n/2];
-        int res[] = new int[n];
-        int [] neg = new int[n/2];
-        int i=0,j=0;
-        for(int num: nums){
+        // ArrayList<Integer> pos = new ArrayList<>();
+        // ArrayList<Integer> neg = new ArrayList<>();
+       
+        // for(int num: nums){
+        //     if(num>0){
+        //         pos.add(num);
+        //     }else{
+        //         neg.add(num);
+        //     }
+        // }
+
+        // for (int i = 0; i < n/2; i++) {
+        //     nums[i*2] = pos.get(i);
+        //     nums[2*i+1] = neg.get(i);
+        // }
+        // return nums;
+
+        // Better approach
+        int [] ans = new int[n];
+        int pos =0, neg=1;
+
+        for(int num : nums){
             if(num>0){
-                pos[i] = num;
-                i++;
+                ans[pos] = num;
+                pos +=2;
             }else{
-                neg[j] = num;
-                j++;
+                ans[neg] = num;
+                neg += 2;
             }
         }
-
-        for (int j2 = 0; j2 < n; j2++) {
-            if(j2%2 ==0){
-                for (int i1 = 0; i1 < i; i1++) {
-                    res[i] = pos[i1];
-                }
-            }else{
-                for (int i1 = 0; i1 < j; i1++) {
-                    res[j] = neg[i1]
-                }
-
-            }
-            
-        }
-        return res;
+        return ans;
     }
 
 }
